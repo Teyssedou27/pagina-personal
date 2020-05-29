@@ -1,52 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/portfolio.png">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/portfolio.png" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style-p.css" />
+    <link rel="stylesheet" href="hamburgers.css" />
     <title>Juen Teyssedou</title>
-</head>
+  </head>
 
-<body>
-
-    <!--MENU DE NAVEGACION-->
+  <body>
+    <!-- MENU DE NAVEGACION-->
 
     <nav id="navegacion">
-        <ul class="menu-navegacion">
-            <li><a href="index.html">INICIO</a></li>
-            <li><a href="portfolio.html">PORTFOLIO</a></li>
-            <li><a href="contacto.html">CONTACTO</a></li>
-        </ul>
+      <ul class="menu-navegacion">
+        <button class="hamburger hamburger--spin" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+        <li class="nav-lista desaparece"><a href="index.html">INICIO</a></li>
+        <li class="nav-lista desaparece">
+          <a href="portfolio.html">PORTFOLIO</a>
+        </li>
+        <li class="nav-lista desaparece">
+          <a href="contacto.html">CONTACTO</a>
+        </li>
+      </ul>
     </nav>
 
-
     <!--INICIO CONTENEDOR GENERAL-->
+    <div id="particles-js"></div>
     <div class="contenedor">
-        <!-- SECCION INICIO-->
-        <section class="seccion-inicio">
-            <div class="contenido-inicio">
-                <div class="imagen-perfil">
-                    <img src="img/perfil.png" alt="imagen de perfil">
-                </div>
-                <div class="descripcion">
-                    <h1>Juan Pablo Teyssedou</h1>
-                    <h2>Desarrollador Web Front End</h2>
-                    <p>Soy un amante de los desafíos. Me gusta aprender, crecer y superarme día a día. Estoy en
-                        permanente actualización y búsqueda de nuevos procesos para implementar.</p>
-                    <p>Apasionado de la tecnología, el desarrollo web, y acutalmente en búsqueda de una oportunidad
-                        laboral para aplicar mis conocimientos, mi creatividad, y poder desarrollarme profesionalmente
-                        en
-                        éste ámbito.</p>
-                </div>
-            </div>
-        </section>
+      <!-- SECCION INICIO-->
+      <section class="seccion-inicio">
+        <div class="contenido-inicio">
+          <div class="imagen-perfil">
+            <img src="img/perfil.png" alt="imagen de perfil" />
+          </div>
 
-
+          <div class="descripcion">
+            <h1>Juan Pablo Teyssedou</h1>
+            <h2>Desarrollador Web Front End Jr.</h2>
+            <p>
+              Soy un amante de los desafíos. Me gusta aprender, crecer y
+              superarme día a día. Estoy en permanente actualización y búsqueda
+              de nuevos procesos para implementar.
+            </p>
+            <p>
+              Apasionado de la tecnología, el desarrollo web, y actualmente en
+              búsqueda de una oportunidad laboral para aplicar mis
+              conocimientos, mi creatividad, y poder desarrollarme
+              profesionalmente en éste ámbito.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
     <!--FIN CONTENEDOR GENERAL-->
-</body>
 
+    <!-- FOOTER-->
+
+    <footer class="footer">
+      Juan Teyssedou &copy; Todos los derechos reservados.
+    </footer>
+
+    <!--Scripts-->
+
+    <script>
+      var hamburger = document.querySelector(".hamburger");
+      hamburger.addEventListener("click", function () {
+        hamburger.classList.toggle("is-active");
+        const enlace = document.getElementsByClassName("nav-lista");
+        for (let i = 0; i < enlace.length; i++) {
+          enlace[i].classList.toggle("desaparece");
+        }
+      });
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="particles.js"></script>
+    <script src="stats.js"></script>
+    <script src="app.js"></script>
+  </body>
 </html>

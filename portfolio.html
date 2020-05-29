@@ -1,66 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/portfolio.png" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style-p.css" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="hamburgers.css" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/portfolio.png">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="styles.css">
     <title>Juen Teyssedou</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <!--MENU DE NAVEGACION-->
-
+    
     <nav id="navegacion">
-        <ul class="menu-navegacion">
-            <li><a href="index.html">INICIO</a></li>
-            <li><a href="portfolio.html">PORTFOLIO</a></li>
-            <li><a href="contacto.html">CONTACTO</a></li>
-        </ul>
+      <ul class="menu-navegacion">
+        <button class="hamburger hamburger--spin" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+        <li class="nav-lista desaparece"><a href="index.html">INICIO</a></li>
+        <li class="nav-lista desaparece">
+          <a href="portfolio.html">PORTFOLIO</a>
+        </li>
+        <li class="nav-lista desaparece">
+          <a href="contacto.html">CONTACTO</a>
+        </li>
+      </ul>
     </nav>
-
-    <div class="contenedor-portfolio">
+    
+    <div id="particles-js"></div>
+    
+      <div class="contenedor-portfolio">
         <div class="titulo-portfolio">
-            <h1> <em>PORTFOLIO</em></h1>
+          <h1><em>PORTFOLIO</em></h1>
         </div>
         <div class="contenido-portfolio">
-            <aside>
-                <h2>Tecnologías Aplicadas</h2>
-                <div class="tecnologias">
-                    <p>Html5</p>
-                    <p>Css3</p>
-                    <p>JavaScript</p>
-                </div>
-            </aside>
-            <div class="proyectos">
-
-                <div>
-                    <a href="https://blof-de-cafe.netlify.app" target="_blank"> <img src="img/cafe.png"
-                            alt="imagen cafe"></a>
-                </div>
-                <div>
-                    <a href="https://pagina-freelancer.netlify.app" target="_blank"><img src="img/paginamia.png"
-                            alt="pagina mia"></a>
-                </div>
-                <div>
-                    <a href="https://tweet-localstorage.netlify.app/" target="_blank"><img src="img/tweet.png"
-                            alt="pagina tweets"></a>
-                </div>
-                <div>
-                    <a href="https://carrito-js.netlify.app/" target="_blank"><img src="img/carrito.png"
-                            alt="pagina carrito"></a>
-                </div>
-                <div>
-                    <a href="https://gasto-semanal-pr.netlify.app/" target="_blank"><img src="img/gasto.png"
-                            alt="pagina gasto"></a>
-                </div>
+          <aside>
+            <h2>Tecnologías Aplicadas</h2>
+            <div class="tecnologias">
+              <p>Html5</p>
+              <p>Css3</p>
+              <p>Bootstrap 4</p>
+              <p>Skeleton</p>
+              <p>JavaScript</p>
             </div>
+          </aside>
+          <div class="proyectos">
+            <div class="card bg-dark m-4" style="width: 18rem;">
+              <img
+                src="img/cafe.png"
+                class="card-img-top img"
+                alt="imagen-cafe"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Blog de Café</h5>
+                <p class="card-text">
+                  Página web realizada con html5 y css3, con un menu de
+                  navegación para acceder a los cursos, blogs y con un
+                  formulario de contacto.
+                </p>
+                <a
+                  href="https://blof-de-cafe.netlify.app"
+                  target="_blank"
+                  class="btn btn-info"
+                  >Ver proyecto</a
+                >
+              </div>
+            </div>
+            <div class="card bg-dark m-4" style="width: 18rem;">
+              <img
+                src="img/libros.png"
+                class="card-img-top img"
+                alt="coleccion-libros"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Colección de libros</h5>
+                <p class="card-text">
+                  Proyecto desarrollado con Bootstrap y JavaScript mediante el
+                  uso de clases y con validación de campos para que los mismos
+                  no puedan estar vacíos.
+                </p>
+                <a
+                  href="https://coleccion-libros.netlify.app/"
+                  target="_blank"
+                  class="btn btn-info"
+                  >Ver proyecto</a
+                >
+              </div>
+            </div>
+            <div class="card bg-dark m-4" style="width: 18rem;">
+              <img
+                src="img/tweet.png"
+                class="card-img-top img"
+                alt="imagen-tweet"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Mis tweets</h5>
+                <p class="card-text">
+                  Proyecto web donde se simula la publicación de tweets,
+                  realizado con Skeleton(css) y JavaScript, utilizando el
+                  LocalStorage para almacenar el contenido de cada tweet.
+                </p>
+                <a
+                  href="https://tweet-localstorage.netlify.app/"
+                  target="_blank"
+                  class="btn btn-info"
+                  >Ver proyecto</a
+                >
+              </div>
+            </div>
+            <div class="card bg-dark m-4" style="width: 18rem;">
+              <img
+                src="img/carrito.png"
+                class="card-img-top img"
+                alt="imagen-carrito"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Carrito de Compras</h5>
+                <p class="card-text">
+                  Desarrollado con Skeleton(css) y JavaScript, donde podemos
+                  agregar cursos a nuestro carrito(los cuales quedan almacenados
+                  en el LocalStorage), eliminarlos o vaciar todo del mismo.
+                </p>
+                <a
+                  href="https://carrito-js.netlify.app/"
+                  target="_blank"
+                  class="btn btn-info"
+                  >Ver proyecto</a
+                >
+              </div>
+            </div>
+            <div class="card bg-dark m-4" style="width: 18rem;">
+              <img
+                src="img/gasto.png"
+                class="card-img-top img"
+                alt="imagen-gasto"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Gasto Semanal</h5>
+                <p class="card-text">
+                  Proyecto realizado con Skeleton(css) y JavaScript, en el que
+                  podemos agregar diferentes tipos de gastos y restarlos a
+                  nuestro presupuesto semanal.
+                </p>
+                <a
+                  href="https://gasto-semanal-pr.netlify.app/"
+                  target="_blank"
+                  class="btn btn-info"
+                  >Ver proyecto</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
-</body>
-
+    <!--Scripts-->
+    <script>
+      var hamburger = document.querySelector(".hamburger");
+      hamburger.addEventListener("click", function () {
+        hamburger.classList.toggle("is-active");
+        const enlace = document.getElementsByClassName("nav-lista");
+        for (let i = 0; i < enlace.length; i++) {
+          enlace[i].classList.toggle("desaparece");
+        }
+      });
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="particles.js"></script>
+    <script src="stats.js"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
